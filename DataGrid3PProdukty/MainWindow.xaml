@@ -14,7 +14,12 @@
                   AlternatingRowBackground="Cyan"
                   AlternationCount="3"
                   GridLinesVisibility="None">
-
+            <!-- domyślnie kolorowanie co drugi wiersz-->
+            <DataGrid.Columns>
+                <DataGridTextColumn
+                    Header="Nazwa"
+                    Binding="{Binding Nazwa}"/>
+            </DataGrid.Columns>
         </DataGrid>
     </Grid>
 </Window>
