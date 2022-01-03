@@ -7,8 +7,14 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="gridProdukty">
-            
+        <DataGrid x:Name="gridProdukty"
+                  CanUserAddRows="True"
+                  CanUserDeleteRows="False"
+                  IsReadOnly="False"
+                  AlternatingRowBackground="Cyan"
+                  AlternationCount="3"
+                  GridLinesVisibility="None">
+
         </DataGrid>
     </Grid>
 </Window>
