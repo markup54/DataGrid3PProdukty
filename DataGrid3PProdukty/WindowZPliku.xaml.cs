@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -35,11 +36,26 @@ namespace DataGrid3PProdukty
             {
                 wykazProduktow = XElement.Load(plik1);
                 gridProdukty2.DataContext = wykazProduktow;
+                ObservableCollection<string> kategorie
+                    = new ObservableCollection<string>()
+                    {
+                        "klasyka",
+                        "fantastyka",
+                        "sensacyjna",
+                        "dramat",
+                        "obyczajowa"
+                    };
+                gridKategoria.ItemsSource = kategorie;
             }
             else
             {
                 MessageBox.Show("nie ma pliku");
             }
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            wykazProduktow.Save(plik2);
         }
     }
 }

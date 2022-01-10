@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:DataGrid3PProdukty"
         mc:Ignorable="d"
         Title="WindowZPliku" Height="450" Width="800">
-    <Grid>
+    <StackPanel>
         <DataGrid
             x:Name="gridProdukty2"
             AutoGenerateColumns="False"
@@ -28,9 +28,14 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                
+                <DataGridComboBoxColumn
+                    Header="Kategoria książki"
+                    x:Name="gridKategoria"
+                    SelectedItemBinding="{Binding Element[Kategoria].Value}">
+                    
+                </DataGridComboBoxColumn>
             </DataGrid.Columns>
         </DataGrid>
-        
-    </Grid>
+        <Button Click="Button_Click">Zapisz do nowego pliku</Button>
+    </StackPanel>
 </Window>
