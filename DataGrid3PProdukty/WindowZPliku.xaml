@@ -9,6 +9,7 @@
     <Grid>
         <DataGrid
             x:Name="gridProdukty2"
+            AutoGenerateColumns="False"
             ItemsSource="{Binding Path=Elements[Produkt]}">
             <DataGrid.Columns>
                 <DataGridTextColumn
