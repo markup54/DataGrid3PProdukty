@@ -1,31 +1,25 @@
-﻿<Window x:Class="DataGrid3PProdukty.MainWindow"
+﻿<Window x:Class="DataGrid3PProdukty.WindowZPliku"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:DataGrid3PProdukty"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WindowZPliku" Height="450" Width="800">
     <Grid>
-        <DataGrid x:Name="gridProdukty"
-                  CanUserAddRows="True"
-                  CanUserDeleteRows="False"
-                  IsReadOnly="False"
-                  AlternatingRowBackground="Cyan"
-                  AlternationCount="3"
-                  GridLinesVisibility="None"
-                  AutoGenerateColumns="False">
-            <!-- domyślnie kolorowanie co drugi wiersz-->
+        <DataGrid
+            x:Name="gridProdukty2"
+            ItemsSource="{Binding Path=Elements[Produkt]}">
             <DataGrid.Columns>
                 <DataGridTextColumn
                     Header="Nazwa"
-                    Binding="{Binding Nazwa}"/>
+                    Binding="{Binding Element[Nazwa].Value}"/>
                 <DataGridCheckBoxColumn
                     Header="Dostępność"
-                    Binding="{Binding Dostepnosc}"/>
+                    Binding="{Binding Element[Dostepnosc].Value}"/>
                 <DataGridTextColumn
                     Header="Cena Produktu"
-                    Binding = "{Binding Cena}">
+                    Binding = "{Binding Element[Cena].Value}">
                     <DataGridTextColumn.ElementStyle>
                         <Style TargetType="{x:Type TextBlock}">
                             <Setter Property="HorizontalAlignment" Value="Right"/>
@@ -33,11 +27,9 @@
                         </Style>
                     </DataGridTextColumn.ElementStyle>
                 </DataGridTextColumn>
-                <DataGridComboBoxColumn
-                    x:Name="KategorieComboBox"
-                    Header="Kategoria"
-                    SelectedItemBinding="{Binding Kategoria}"/>
+                
             </DataGrid.Columns>
         </DataGrid>
+        
     </Grid>
 </Window>

@@ -38,6 +38,9 @@ namespace DataGrid3PProdukty
             ListaProduktow.Add(new Produkt("Diuna",true,24,"fantastyka"));
             ListaProduktow.Add(new Produkt("Hobbit",false,15,"fantastyka"));
             gridProdukty.ItemsSource = ListaProduktow;
+            ObservableCollection<string> ListaKategorii = new ObservableCollection<string>()
+            { "klasyka","sensacyjna","fantastyka","obyczajowe","dramaty"};
+            KategorieComboBox.ItemsSource = ListaKategorii;
         }
     }
 }

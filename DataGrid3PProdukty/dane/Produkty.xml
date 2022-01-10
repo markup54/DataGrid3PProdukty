@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ListaProduktow>
+	<Produkt>
+		<Nazwa>Pan Tadeusz</Nazwa>
+		<Dostepnosc>true</Dostepnosc>
+		<Cena>15.99</Cena>
+		<Kategoria>klasyka</Kategoria>
+	</Produkt>
+	<Produkt>
+		<Nazwa>Lalka</Nazwa>
+		<Dostepnosc>true</Dostepnosc>
+		<Cena>16.99</Cena>
+		<Kategoria>klasyka</Kategoria>
+	</Produkt>
+	<Produkt>
+		<Nazwa>Kamienie na szaniec</Nazwa>
+		<Dostepnosc>false</Dostepnosc>
+		<Cena>22.99</Cena>
+		<Kategoria>sensacyjna</Kategoria>
+	</Produkt>
+	<Produkt>
+		<Nazwa>Diuna</Nazwa>
+		<Dostepnosc>true</Dostepnosc>
+		<Cena>16.99</Cena>
+		<Kategoria>fantastyka</Kategoria>
+	</Produkt>
+	<Produkt>
+		<Nazwa>Hobbit</Nazwa>
+		<Dostepnosc>true</Dostepnosc>
+		<Cena>16.99</Cena>
+		<Kategoria>klasyka</Kategoria>
+	</Produkt>
+</ListaProduktow> 
